@@ -38,4 +38,17 @@ const buildTestimonials = (arr) => {
   printToDom('testimonials', domString);
 };
 
-buildTestimonials(testimonials);
+const footerBuilder = () => {
+  let domstring = '';
+  const date = new Date().getFullYear();
+  domstring += `<p class="col-xs-1 text-center">&copy${date}</p>`;
+  printToDom('footer-text', domstring)
+}
+
+
+const init = () => {
+  buildTestimonials(testimonials);
+  footerBuilder();
+};
+
+init();
