@@ -7,9 +7,12 @@ const printToDom = (divId, textToPrint) => {
 const footerBuilder = () => {
   let domstring = '';
   const date = new Date().getFullYear();
-  domstring += date;
-  printToDom()
+  domstring += `<p class="col-xs-1 text-center">&copy${date}</p>`;
+  console.log(date);
+  printToDom('footer-text', domstring)
 }
+
+footerBuilder();
 
 
 
